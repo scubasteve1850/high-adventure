@@ -1,5 +1,5 @@
 # High Adventure 2027
 
-Timberlane Ward Young Men High Adventure website.
+Static Cloudflare Pages-ready website. Upload the folder or connect a GitHub repository. Set the custom domain to `highadventure.timberlaneward.com` in Cloudflare Pages and configure DNS as prompted.
 
-Planning in progress. Intended domain: highadventure.timberlaneward.com.
+Trip details are placeholders until approved. The ideas and checklist use browser localStorage only; no submissions reach leaders. External photos and Google Fonts require internet access.
