@@ -17,3 +17,24 @@
 #ideaList span { overflow-wrap: anywhere; }
 #ideaList button { flex: none; min-height: 44px; white-space: nowrap; }
 #ideaList button[aria-pressed="true"] { background: var(--gold); color: #102a29; }
+
+/* Compact 2027 idea board: visually lively without adding a separate application. */
+.adventure-vote-board{padding:0!important;overflow:hidden;border:1px solid #547b6c;border-radius:24px;background:#112e2d;box-shadow:0 20px 65px #0003}
+.idea-board-header{position:relative;display:flex;justify-content:space-between;gap:14px;align-items:center;padding:27px 25px;background:radial-gradient(circle at 95% 0%,#477b73 0%,transparent 48%),linear-gradient(115deg,#244f50,#102b35);border-bottom:1px solid #ffffff20}
+.idea-board-header h3{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,5vw,3rem);text-transform:uppercase;line-height:1.05;margin:8px 0}
+.idea-board-header p{max-width:490px;margin:0;color:#e0e9df;line-height:1.55}
+.idea-board-kicker{color:#f5c77c;letter-spacing:.12em;font-size:.7rem;font-weight:800}
+.idea-board-art{font-size:clamp(3.4rem,10vw,6rem);filter:drop-shadow(0 8px 20px #0004)}
+.idea-board-content{padding:22px 25px 25px}
+.idea-connect-note{border-radius:12px;background:#244942;color:#d7eee4;padding:12px 14px;font-size:.82rem;line-height:1.5;margin:0 0 20px}
+.idea-board-list-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:23px;border-top:1px solid #ffffff24;padding-top:17px}
+.idea-board-list-head h3{margin:0;font-family:'Barlow Condensed',sans-serif;font-size:1.55rem;text-transform:uppercase}
+.idea-board-list-head span{font-size:.72rem;color:#e7c483;white-space:nowrap}
+.adventure-vote-board #ideaList{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+.adventure-vote-board #ideaList li{display:flex;align-items:center;justify-content:space-between;gap:14px;border:1px solid #42685f;border-radius:13px;padding:13px 14px;background:#21443e;min-width:0}
+.adventure-vote-board #ideaList li>span{min-width:0;overflow-wrap:anywhere;font-weight:700;line-height:1.45}
+.adventure-vote-board #ideaList button{flex-shrink:0;background:#f2c47c;color:#17312e;border:0;border-radius:10px;padding:10px 13px;font-weight:800;cursor:pointer}
+.adventure-vote-board #ideaList button[aria-pressed="true"]{background:#c5efb9}
+.adventure-vote-board #ideaList button:disabled{opacity:.65;cursor:not-allowed}
+.adventure-vote-board #ideaForm button{background:#f2c47c;color:#17312e;border:0;font-weight:800}
+@media(max-width:600px){.idea-board-header{padding:22px 18px}.idea-board-content{padding:18px}.idea-board-art{font-size:3rem}.idea-board-list-head{align-items:baseline}.adventure-vote-board #ideaList li{padding:11px 12px}}
