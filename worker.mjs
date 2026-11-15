@@ -49,6 +49,12 @@ export default {
       return json({ error: 'Method not allowed.' }, 405, { Allow: allowed.join(', ') });
     }
 
+    // A browser-generated voter cookie is not Connect authentication.
+    // Fail closed until Connect-issued identity verification is configured.
+    if (request.method !== 'GET') {
+      return json({ error: 'Voting and submissions are being connected to Timberlane Connect sign-in. Please check back soon.' }, 403);
+    }
+
     const cookies = request.headers.get('Cookie')?.split(';').map(cookie => cookie.trim()) ?? [];
     const voter = cookies.find(cookie => cookie.startsWith(voterCookie + '='))?.slice(voterCookie.length + 1);
     const hasVoter = uuidPattern.test(voter ?? '');
