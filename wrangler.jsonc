@@ -2,6 +2,24 @@
   "name": "high-adventure",
   "compatibility_date": "2026-11-03",
   "assets": {
-    "directory": "."
-  }
+    "directory": ".",
+    "binding": "ASSETS"
+  },
+  "main": "worker.mjs",
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "IDEA_BOARD",
+        "class_name": "IdeaBoard"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "ideas-v1",
+      "new_sqlite_classes": [
+        "IdeaBoard"
+      ]
+    }
+  ]
 }
